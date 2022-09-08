@@ -1,0 +1,22 @@
+
+.col-sm-12 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  /*background-color: rgb(44, 70, 105);*/
+  align-items: center;
+}
+.logo{
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-top: -6px;
+}
+.navbar-brand{
+  padding-right: 10px;
+}
+
+.dropdown-menu{
+  background-color: rgba(130, 159, 196, 0.785);
+}

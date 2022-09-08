@@ -1,0 +1,39 @@
+<header>
+  <html>
+  <link rel="stylesheet" href="dashboard.component.css">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div><img src="../assets/Images/logo.png" class="logo"></div>
+    <a class="navbar-brand" [routerLink]="'home'">Hospital Management</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Patient
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" [routerLink]="'patient/add-patient'">Add Patient</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" [routerLink]="'patient/view-patients'">View Patients</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'about-us'">About Us</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="'contact-us'">Contact Us</a>
+        </li>
+
+      </ul>
+    </div>
+    <p style="color: rgb(232, 232, 232); margin: 0 15px; font-size: 15px;">Logged in as: {{userName}}</p>
+    <button type="button" class="btn btn-secondary" style="padding-bottom:0" (click)="logout()"><mat-icon class="mr-8">logout</mat-icon></button>
+  </nav>
+  </html>
+</header>
+<router-outlet></router-outlet>

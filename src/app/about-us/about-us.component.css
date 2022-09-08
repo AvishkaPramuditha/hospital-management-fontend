@@ -1,0 +1,61 @@
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin:50px auto;
+}
+
+section{
+  padding: 100px 0;
+}
+.skills{
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight:600;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(4, 4, 84);
+}
+
+.services{
+  color: #fff;
+  background-image: url('src/assets/Images/background2.webp');
+  height:100vh;
+}
+.services .title::before{
+  background: #fff;
+}
+.services .serv-content .card{
+  background: rgb(17, 42, 62);
+  text-align:left;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
+.services .serv-content .card:hover{
+  transform: scale(1.05);
+  padding-left: 25px;
+
+}
+.services .serv-content .card .box{
+  transition: all 0.3s ease;
+}
+
+
+.services .serv-content .card:hover i{
+  color: #fff;
+}
+.services .serv-content .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}

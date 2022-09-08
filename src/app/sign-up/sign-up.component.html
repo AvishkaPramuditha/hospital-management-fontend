@@ -1,0 +1,38 @@
+<div class="container-set">
+  <div><h2 style="margin-bottom:30px ">Lanka Hospital Management system</h2></div>
+  <div id="imageDiv"><img src="assets/Images/logo.png" id="logo"></div>
+  <div class="inner">
+    <form [formGroup]="signUpForm" (ngSubmit)="signup()">
+      <div class="row" class="alert alert-danger" *ngIf="alreadySaved">
+        <div class="col-12">
+          <h6 style="text-align:center;margin-top: 10px;font-size: 15px;" >Email or User Name already Registered</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <input formControlName="userName" type="text" class="form-control" placeholder="User Name">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <input formControlName="email" type="email" class="form-control" placeholder="Email">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <input formControlName="password" type="password" class="form-control" placeholder="Password">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <Button class="btn btn-primary" style="width:100%" type="submit" [disabled]="signUpForm.invalid">Sign Up</Button>
+        </div>
+      </div>
+      <br>
+      <p>Already have an account? <a routerLink="/login">Login</a> </p>
+    </form>
+  </div>
+</div>

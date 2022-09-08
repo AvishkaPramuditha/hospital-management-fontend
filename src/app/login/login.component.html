@@ -1,0 +1,34 @@
+<div class="container-set">
+  <div><h2 style="margin-bottom:30px ">Lanka Hospital Management system</h2></div>
+  <div id="imageDiv"><img src="assets/Images/logo.png" id="logo"></div>
+
+  <div class="inner">
+    <form [formGroup]="loginForm" (ngSubmit)="login()" >
+      <div class="row" class="alert alert-danger" *ngIf="invalidUser">
+        <div class="col-12">
+          <h6 style="text-align:center;margin-top: 10px;font-size: 15px;">UserID or Password is incorrect!</h6>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <input formControlName="userName" type="text" class="form-control" placeholder="User Name">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <input formControlName="password" type="password" class="form-control" placeholder="Password">
+        </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <Button class="btn btn-primary" style="width:100%" type="submit" [disabled]="loginForm.invalid">Login</Button>
+        </div>
+      </div>
+      <br>
+      <p>Don't have an account? <a routerLink="/sign-up">Sign Up</a> </p>
+    </form>
+
+  </div>
+</div>

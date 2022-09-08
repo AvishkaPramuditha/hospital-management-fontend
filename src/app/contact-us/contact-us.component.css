@@ -1,0 +1,101 @@
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin:30px auto;
+}
+
+section{
+  padding: 100px 0;
+}
+.services{
+  font-family: 'Poppins', sans-serif;
+  background-image: url('src/assets/Images/background2.webp');
+}
+
+.services .serv-content, .serv-content2{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 20px;
+}
+.services .serv-content{
+  justify-content: space-between;
+}
+.serv-content2{
+  justify-content: center;
+  justify-content: space-around;
+}
+
+.title{
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  font-weight:600;
+  padding-bottom: 20px;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(4, 4, 84);
+}
+
+section .title::after{
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: rgb(163, 27, 163);
+  padding: 5px;
+  background: #fff;
+  transform: translateX(-50%);
+}
+
+/* Services section Styling */
+.services, .teams, .blog{
+  color: #fff;
+  background-image: url('src/assets/Images/background2.webp');
+  height:100vh;
+}
+.services .title::before{
+  background: #fff;
+}
+.services .title::after{
+  background: #111;
+}
+.services .serv-content .card,
+.services .serv-content2 .card{
+  width: calc(33% - 20px);
+  background: rgb(17, 42, 62);
+  text-align: center;
+  border-radius: 6px;
+  padding: 20px 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover,
+.services .serv-content2 .card:hover{
+  background: rgb(17, 42, 62);
+}
+.services .serv-content .card .box,
+.services .serv-content2 .card .box{
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box,
+.services .serv-content2 .card:hover .box{
+  transform: scale(1.05);
+}
+.services .serv-content .card i,
+.services .serv-content2 .card i{
+  font-size: 50px;
+  color: rgb(146, 31, 146);
+  transition: all 0.3s ease;
+}
+.services .serv-content .card:hover i,
+.services .serv-content2 .card:hover i{
+  color: #fff;
+}
+.services .serv-content .card .text,
+.services .serv-content2 .card .text{
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0;
+}
+
+

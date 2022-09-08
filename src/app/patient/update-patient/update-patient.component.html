@@ -1,0 +1,136 @@
+<link rel="stylesheet" href="update-patient.component.css">
+<div class="card">
+    <div class="card-header">
+      <h2>Update Patient</h2>
+    </div>
+    <div class="card-body">
+                <form #patientForm="ngForm" novalidate (ngSubmit)="onupdate()">
+                 
+                    <div class="form-group">
+                        <label>Patient ID</label>
+                        <input type="text" name="id" 
+                               required #id="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="id.touched && id.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.id">
+                        <small class="text-danger" [class.d-none]="id.valid || id.untouched || patientForm.submitted">Patient Id is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Patient Name</label>
+                        <input type="text" name="name" 
+                               required #name="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="name.touched && name.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.name">
+                        <small class="text-danger" [class.d-none]="name.valid || name.untouched || patientForm.submitted">Patient name is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Address</label>
+                        <input type="text" name="address" 
+                               required #address="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="address.touched && address.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.address">
+                        <small class="text-danger" [class.d-none]="address.valid || address.untouched || patientForm.submitted">Patient address is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Date of Birth</label>
+                        <input type="date" name="dob" 
+                               required #dob="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="dob.touched && dob.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.dob">
+                        <small class="text-danger" [class.d-none]="dob.valid || dob.untouched || patientForm.submitted">Date of Birth is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Gender</label>
+                        <input type="text" name="gender" 
+                               required #gender="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="gender.touched && gender.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.gender">
+                        <small class="text-danger" [class.d-none]="gender.valid || gender.untouched || patientForm.submitted">Patient gender is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="text" name="email" 
+                               required #email="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="email.touched && email.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.email">
+                        <small class="text-danger" [class.d-none]="email.valid || email.untouched || patientForm.submitted">Patient email is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Contact Number</label>
+                        <input type="text" name="contactNumber" 
+                               required #contactNumber="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="contactNumber.touched && contactNumber.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.contactNumber">
+                        <small class="text-danger" [class.d-none]="contactNumber.valid || contactNumber.untouched || patientForm.submitted">Patient Contact Number is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Emergency Contact Number</label>
+                        <input type="text" name="emergencyContactNumber" 
+                               required #emergencyContactNumber="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="emergencyContactNumber.touched && emergencyContactNumber.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.emergencyContactNumber">
+                        <small class="text-danger" [class.d-none]="emergencyContactNumber.valid || emergencyContactNumber.untouched || patientForm.submitted">Patient Emergency Contact Number is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Blood Type</label>
+                        <input type="text" name="bloodType" 
+                               required #bloodType="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="bloodType.touched && bloodType.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.bloodType">
+                        <small class="text-danger" [class.d-none]="bloodType.valid || bloodType.untouched || patientForm.submitted">Patient Blood Type is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Allergies</label>
+                        <input type="text" name="allergies" 
+                               required #allergies="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="allergies.touched && allergies.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.allergies">
+                        <small class="text-danger" [class.d-none]="allergies.valid || allergies.untouched || patientForm.submitted">Patient Allergies is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Cause</label>
+                        <input type="text" name="cause" 
+                               required #cause="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="cause.touched && cause.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.cause">
+                        <small class="text-danger" [class.d-none]="cause.valid || cause.untouched || patientForm.submitted">Patient Cause is required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Priority Level</label>
+                        <input type="text" name="priorityLevel" 
+                               required #priorityLevel="ngModel" 
+                               class="form-control" 
+                               [class.is-invalid]="priorityLevel.touched && priorityLevel.invalid && !patientForm.submitted"
+                               [(ngModel)]="patient.priorityLevel">
+                        <small class="text-danger" [class.d-none]="priorityLevel.valid || priorityLevel.untouched || patientForm.submitted">Patient Priority Level is required</small>
+                    </div>
+
+                    
+                
+                <div class="submit-button"><button class="btn btn-primary" type="submit"[disabled]="patientForm.invalid">Update Patient</button></div>
+                            
+          
+                </form>
+    </div>
+  </div>

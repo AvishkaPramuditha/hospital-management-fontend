@@ -1,0 +1,19 @@
+.container-set {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  flex-direction: column;
+}
+
+.inner{
+  height: auto;
+  width: 400px;
+}
+
+#logo{
+  height:200px;
+  width: 200px;
+  margin-bottom:50px ;
+}
